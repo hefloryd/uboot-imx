@@ -488,12 +488,14 @@ int arch_cpu_init(void)
 		 * clear the ref_ssp_en bit16 of gpr1 to workaround it.
 		 * then warm-reset imx6q/dl/solo again.
 		 */
+#if 0
 		val = readl(IOMUXC_BASE_ADDR + 0x4);
 		if (val & (0x1 << 16)) {
 			val &= ~(0x1 << 16);
 			writel(val, IOMUXC_BASE_ADDR + 0x4);
 			reset_cpu(0);
 		}
+#endif
 	}
 
 	init_aips();
