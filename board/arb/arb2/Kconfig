@@ -1,0 +1,12 @@
+if TARGET_ARB2
+
+config SYS_BOARD
+	default "arb2"
+
+config SYS_VENDOR
+	default "arb"
+
+config SYS_CONFIG_NAME
+	default "arb2"
+
+endif
